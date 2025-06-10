@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Detailing - Premium Car Detailing Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>COMPOUND DETAILING</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Premium Car Detailing</h1>
+                <p class="hero-subtitle">Professional car cleaning and detailing services in Sywell & Overstone</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Our Services</a>
+                    <a href="https://wa.me/447368865411" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Professional car detailing at competitive prices</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Exterior Wash</h3>
+                    <p class="service-description">Complete exterior cleaning including wheels, windows, and paint protection</p>
+                    <div class="service-price">£15</div>
+                    <p class="price-note">*Price may vary for very clean/small or large/dirty cars</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h3>Full Valet</h3>
+                    <p class="service-description">Complete interior and exterior detailing for the ultimate clean</p>
+                    <div class="service-price">£35</div>
+                    <p class="price-note">*Price may vary for very clean/small or large/dirty cars</p>
+                </div>
+            </div>
+            <div class="quote-section">
+                <h3>Get Your Instant Quote</h3>
+                <p>Select your car details for an instant price estimate</p>
+                <div class="quote-generator">
+                    <div class="quote-form">
+                        <div class="form-group">
+                            <label for="service-type">Service Type</label>
+                            <select id="service-type" class="form-select">
+                                <option value="">Select Service</option>
+                                <option value="exterior">Exterior Wash</option>
+                                <option value="full">Full Valet</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-size">Car Size</label>
+                            <select id="car-size" class="form-select">
+                                <option value="">Select Size</option>
+                                <option value="small">Small (Hatchback, City Car)</option>
+                                <option value="medium">Medium (Saloon, Estate)</option>
+                                <option value="large">Large (SUV, 4x4, Van)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-condition">Car Condition</label>
+                            <select id="car-condition" class="form-select">
+                                <option value="">Select Condition</option>
+                                <option value="clean">Clean (Recent wash, light dirt)</option>
+                                <option value="average">Average (Normal dirt, some grime)</option>
+                                <option value="dirty">Dirty (Heavy dirt, mud, stains)</option>
+                            </select>
+                        </div>
+                        <div class="quote-result" id="quote-result">
+                            <div class="quote-price-display">
+                                <span class="quote-label">Estimated Price:</span>
+                                <span class="quote-price" id="quote-price">Select options above</span>
+                            </div>
+                            <div class="quote-actions" id="quote-actions" style="display: none;">
+                                <p class="quote-note">*Final price may vary slightly based on specific requirements</p>
+                                <a href="#" class="btn btn-whatsapp quote-whatsapp-btn" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Book via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Work</h2>
+                <p class="section-subtitle">See the difference we make</p>
+            </div>
+            <div class="gallery-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="gallery-item"><img src="1/Clean-Jag.jpg" alt="Clean Jaguar" loading="lazy"></div>
+                        <div class="gallery-item"><img src="1/Audi.png" alt="Audi Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="1/BLUE-DONE.png" alt="Blue Car Complete" loading="lazy"></div>
+                        <div class="gallery-item"><img src="1/BLACK-DONE.png" alt="Black Car Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="1/Dom Smith.jpg" alt="Professional Detailing" loading="lazy"></div>
+                        <div class="gallery-item"><img src="2/Ford-scaled.jpg" alt="Ford Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="2/Fiat.png" alt="Fiat Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="2/IMG-20240529-WA0007-2.jpg" alt="Professional Detail Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="2/FB_IMG_1721074016373.jpg" alt="Car Cleaning Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="2/IMG_20240714_195330_942.webp" alt="Detail Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="3/Mercerdes_E1-1.jpg" alt="Mercedes Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="3/Mercerdes_E1-2.jpg" alt="Mercedes Interior" loading="lazy"></div>
+                        <div class="gallery-item"><img src="3/Jag-ba.png" alt="Jaguar Before After" loading="lazy"></div>
+                        <div class="gallery-item"><img src="3/Int-1.jpeg" alt="Interior Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="3/Lines-scaled.jpg" alt="Paint Finish" loading="lazy"></div>
+                        <div class="gallery-item"><img src="4/mustange.jpg" alt="Mustang Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="4/Mercerdes_E1-3.jpg" alt="Mercedes E-Class Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="4/Mercerdes_E1-4.jpg" alt="Mercedes Detail Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="4/Mercerdes_E1-5.jpg" alt="Mercedes Finish" loading="lazy"></div>
+                        <div class="gallery-item"><img src="4/Porsche-Wheel.jpg" alt="Porsche Wheel Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="5/Snapchat-632489440.jpg" alt="Detail Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="5/Snapchat-63955057.jpg" alt="Car Cleaning" loading="lazy"></div>
+                        <div class="gallery-item"><img src="5/Snapchat-519628608.jpg" alt="Vehicle Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="5/Snapchat-784065089.jpg" alt="Car Detail Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="5/Snapchat-961391592.jpg" alt="Professional Clean" loading="lazy"></div>
+                        <div class="gallery-item"><img src="6/FB_IMG_1721074010520.jpg" alt="Car Detail Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="6/Snapchat-1066451245.jpg" alt="Vehicle Cleaning" loading="lazy"></div>
+                        <div class="gallery-item"><img src="6/Snapchat-1238254185.jpg" alt="Detail Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="6/E-Audi.png" alt="Audi E-tron Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="6/Ext-1.png" alt="Exterior Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="7/REDDONE.png" alt="Red Car Complete" loading="lazy"></div>
+                        <div class="gallery-item"><img src="7/RSDONE.png" alt="Car Detail Complete" loading="lazy"></div>
+                        <div class="gallery-item"><img src="7/Snapchat-10231531.jpg" alt="Professional Work" loading="lazy"></div>
+                        <div class="gallery-item"><img src="7/Snapchat-59287669.jpg" alt="Detail Quality" loading="lazy"></div>
+                        <div class="gallery-item"><img src="7/Snapchat-1008344799.jpg" alt="Car Care Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="8/WhatsApp-Image-2024-06-16-at-16.31.42_c1f6ab98.jpg" alt="Professional Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="8/Snapchat-1277016607.jpg" alt="Detail Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="8/WhatsApp-Image-2024-07-06-at-20.19.15.jpeg" alt="Car Cleaning" loading="lazy"></div>
+                        <div class="gallery-item"><img src="8/Snapchat-1531529763.jpg" alt="Vehicle Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="8/White-Range-NUM.png" alt="Range Rover Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="9/WhatsApp-Image-2024-06-16-at-11.31.38_06835ccf.jpg" alt="Premium Service" loading="lazy"></div>
+                        <div class="gallery-item"><img src="9/VAN-DONE.png" alt="Van Detail Complete" loading="lazy"></div>
+                        <div class="gallery-item"><img src="9/VW-NUM.png" alt="Volkswagen Detail" loading="lazy"></div>
+                        <div class="gallery-item"><img src="9/Spraying-2.jpeg" alt="Professional Spraying" loading="lazy"></div>
+                        <div class="gallery-item"><img src="9/Thomas Brookes.jpeg" alt="Team Member" loading="lazy"></div>
+                        <div class="gallery-item"><img src="DONE.png" alt="Complete Detail Work" loading="lazy"></div>
+                    </div>
+                </div>
+                <button class="slider-btn slider-btn-prev" aria-label="Previous images">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn slider-btn-next" aria-label="Next images">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to give your car the treatment it deserves? Contact us via WhatsApp for booking and inquiries.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sywell & Overstone, UK</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp Only</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/447368865411" class="btn btn-whatsapp-large" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Message Us on WhatsApp
+                    </a>
+                </div>
+                <div class="contact-image">
+                    <img src="1/Dom Smith.jpg" alt="Professional Car Detailing" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>COMPOUND DETAILING</h3>
+                    <p>Premium car detailing services in Sywell & Overstone</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>WhatsApp: 07368 865 411</p>
+                    <p>Sywell & Overstone, UK</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Compound Detailing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
