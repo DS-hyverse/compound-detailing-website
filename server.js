@@ -4,29 +4,52 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Debug route to test if Express routing works
-app.get('/debug', (req, res) => {
-    res.send(`
-        <h1>🚀 EXPRESS SERVER IS WORKING!</h1>
-        <p><strong>Time:</strong> ${new Date().toISOString()}</p>
-        <p><strong>Port:</strong> ${PORT}</p>
-        <p><strong>URL:</strong> ${req.url}</p>
-        <hr>
-        <h3>Test Links:</h3>
-        <a href="/admin">Try /admin</a><br>
-        <a href="/login">Try /login</a><br>
-        <a href="/">Go Home</a>
-    `);
+// Disable express static middleware completely and handle everything manually
+
+// Specific routes first
+app.get('/admin', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin.html'));
 });
 
-// Login route - MUST come before static middleware
 app.get('/login', (req, res) => {
     res.sendFile(path.join(__dirname, 'login.html'));
 });
 
-// Admin route - MUST come before static middleware
-app.get('/admin', (req, res) => {
-    res.sendFile(path.join(__dirname, 'admin.html'));
+// Serve specific static files manually
+app.get('/admin.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin.css'));
+});
+
+app.get('/admin.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'admin.js'));
+});
+
+app.get('/supabase-config.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'supabase-config.js'));
+});
+
+app.get('/styles.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'styles.css'));
+});
+
+app.get('/script.js', (req, res) => {
+    res.sendFile(path.join(__dirname, 'script.js'));
+});
+
+// Serve image directories
+app.use('/1', express.static(path.join(__dirname, '1')));
+app.use('/2', express.static(path.join(__dirname, '2')));
+app.use('/3', express.static(path.join(__dirname, '3')));
+app.use('/4', express.static(path.join(__dirname, '4')));
+app.use('/5', express.static(path.join(__dirname, '5')));
+app.use('/6', express.static(path.join(__dirname, '6')));
+app.use('/7', express.static(path.join(__dirname, '7')));
+app.use('/8', express.static(path.join(__dirname, '8')));
+app.use('/9', express.static(path.join(__dirname, '9')));
+
+// Serve other static files
+app.get('/DONE.png', (req, res) => {
+    res.sendFile(path.join(__dirname, 'DONE.png'));
 });
 
 // Default route
@@ -34,8 +57,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Serve static files - AFTER specific routes
-app.use(express.static('.'));
+// Catch all - redirect to home
+app.get('*', (req, res) => {
+    res.redirect('/');
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
