@@ -4,6 +4,11 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Login route - MUST come before static middleware
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
+});
+
 // Admin route - MUST come before static middleware
 app.get('/admin', (req, res) => {
     res.sendFile(path.join(__dirname, 'admin.html'));
