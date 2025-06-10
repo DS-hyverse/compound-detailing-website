@@ -4,8 +4,9 @@
   "description": "Professional car detailing website for Compound Detailing",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve . -s -l 3000",
-    "dev": "npx serve . -s -l 3000"
+    "start": "serve . -s -p $PORT",
+    "build": "echo 'Static site - no build needed'",
+    "dev": "serve . -s -l 3000"
   },
   "keywords": [
     "car-detailing",
@@ -19,6 +20,6 @@
     "serve": "^14.2.1"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   }
 } 
