@@ -59,13 +59,17 @@ class AdminDashboard {
 
         const result = await this.db.signIn(email, password);
         
+        // --- Added for debugging ---
+        console.log('Supabase login attempt result:', result);
+        // -------------------------
+
         if (result.success) {
             // Redirect to admin dashboard
-            window.location.href = 'admin.html';
+            window.location.href = '/admin';
         } else {
             // Show error message
             errorMessage.style.display = 'flex';
-            document.getElementById('error-text').textContent = result.error;
+            document.getElementById('error-text').textContent = result.error || 'An unknown error occurred.';
             
             // Clear form
             document.getElementById('username').value = '';
@@ -88,7 +92,7 @@ class AdminDashboard {
         
         if (!result.success || !result.user) {
             // Not authenticated
-            window.location.href = 'login.html';
+            window.location.href = '/login';
             return false;
         }
         return true;
@@ -155,7 +159,7 @@ class AdminDashboard {
             this.subscription.unsubscribe();
         }
         await this.db.signOut();
-        window.location.href = 'login.html';
+        window.location.href = '/login';
     }
 
     // Job management
