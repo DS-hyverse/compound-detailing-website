@@ -1,11 +1,9 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "echo 'Static site - no build required'"
+    "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "npx serve . -s",
     "healthcheckPath": "/",
     "healthcheckTimeout": 300,
     "restartPolicyType": "ON_FAILURE",
