@@ -4,12 +4,13 @@ const SUPABASE_URL = 'https://bzyesiicyhgdksbtusob.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ6eWVzaWljeWhnZGtzYnR1c29iIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkyODk0NTQsImV4cCI6MjA2NDg2NTQ1NH0.efKdrvgvWj-940DNvwVHUCbGOxSXLM_OzOVq74n4rOQ';
 
 // Initialize Supabase client
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const { createClient } = supabase;
+const supabaseClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // Database service class
 class DatabaseService {
     constructor() {
-        this.supabase = supabase;
+        this.supabase = supabaseClient;
     }
 
     // Authentication methods
