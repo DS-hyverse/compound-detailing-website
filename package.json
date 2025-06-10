@@ -4,7 +4,7 @@
   "description": "Professional car detailing website for Compound Detailing",
   "main": "index.html",
   "scripts": {
-    "start": "serve . -s -p $PORT --single",
+    "start": "serve . -p $PORT",
     "build": "echo 'Static site - no build needed'",
     "dev": "serve . -s -l 3000"
   },
