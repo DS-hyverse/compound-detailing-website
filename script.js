@@ -20,12 +20,10 @@ navLinks.forEach(link => {
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-        navbar.style.backdropFilter = 'blur(20px)';
+    if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.classList.remove('scrolled');
     }
 });
 
