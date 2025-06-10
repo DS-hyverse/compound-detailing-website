@@ -1,7 +1,7 @@
 {
   "name": "compound-detailing-website",
   "version": "1.0.0",
-  "description": "Professional car detailing website for Compound Detailing",
+  "description": "Local car washing by local teenagers",
   "main": "index.html",
   "scripts": {
     "start": "node server.js",
