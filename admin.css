@@ -1,3 +1,18 @@
+/* Light Theme Variables */
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --white: #ffffff;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 123, 255, 0.1);
+    --danger-color: #dc3545;
+    --danger-dark: #c82333;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -8,13 +23,13 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f8f9fa;
+    color: var(--text-color);
+    background: var(--bg-color);
 }
 
 /* Login Page Styles */
 .login-page {
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+    background: linear-gradient(135deg, var(--bg-color), var(--primary-color));
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -28,12 +43,11 @@ body {
 }
 
 .login-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--white);
     border-radius: 20px;
     padding: 2.5rem;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .login-header {
@@ -44,7 +58,7 @@ body {
 .login-header h1 {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #0a0a0a;
+    color: var(--text-color);
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
 }
@@ -69,7 +83,7 @@ body {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #333;
+    color: var(--text-color);
 }
 
 .input-group {
@@ -88,7 +102,7 @@ body {
 .input-group input {
     width: 100%;
     padding: 1rem 1rem 1rem 3rem;
-    border: 2px solid #e1e5e9;
+    border: 2px solid var(--border-color);
     border-radius: 10px;
     font-size: 1rem;
     transition: all 0.3s ease;
@@ -97,8 +111,8 @@ body {
 
 .input-group input:focus {
     outline: none;
-    border-color: #25d366;
-    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--shadow-color);
 }
 
 .toggle-password {
@@ -115,14 +129,14 @@ body {
 }
 
 .toggle-password:hover {
-    color: #25d366;
+    color: var(--primary-color);
 }
 
 .login-btn {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: var(--white);
     border: none;
     border-radius: 10px;
     font-size: 1rem;
@@ -137,15 +151,15 @@ body {
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 8px 25px var(--shadow-color);
 }
 
 .error-message {
     background: #fee;
-    color: #c53030;
+    color: var(--danger-color);
     padding: 0.8rem;
     border-radius: 8px;
-    border: 1px solid #feb2b2;
+    border: 1px solid var(--danger-color);
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -174,15 +188,15 @@ body {
 
 /* Admin Dashboard Styles */
 .admin-page {
-    background: #f8f9fa;
+    background: var(--bg-color);
     min-height: 100vh;
 }
 
 .admin-header {
-    background: #fff;
-    border-bottom: 1px solid #e1e5e9;
+    background: var(--white);
+    border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header-content {
@@ -197,13 +211,13 @@ body {
 .header-left h1 {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #0a0a0a;
+    color: var(--text-color);
     letter-spacing: 1px;
 }
 
 .admin-badge {
-    background: #25d366;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -223,8 +237,8 @@ body {
 }
 
 .logout-btn {
-    background: #dc3545;
-    color: white;
+    background: var(--danger-color);
+    color: var(--white);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -237,7 +251,7 @@ body {
 }
 
 .logout-btn:hover {
-    background: #c82333;
+    background: var(--danger-dark);
     transform: translateY(-1px);
 }
 
@@ -260,86 +274,76 @@ body {
 }
 
 .stat-card {
-    background: white;
+    background: var(--white);
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e1e5e9;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    transition: transform 0.3s ease;
+    gap: 1.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .stat-icon {
+    font-size: 2rem;
     width: 60px;
     height: 60px;
-    border-radius: 12px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    color: white;
+    color: var(--white);
 }
 
-.stat-icon.pending {
-    background: linear-gradient(135deg, #ffc107, #fd7e14);
-}
-
-.stat-icon.assigned {
-    background: linear-gradient(135deg, #17a2b8, #6f42c1);
-}
-
-.stat-icon.completed {
-    background: linear-gradient(135deg, #28a745, #20c997);
-}
-
-.stat-icon.revenue {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-}
+.stat-icon.pending { background: var(--warning-color); }
+.stat-icon.assigned { background: var(--primary-color); }
+.stat-icon.completed { background: var(--success-color); }
+.stat-icon.revenue { background: var(--text-color); }
 
 .stat-info h3 {
     font-size: 2rem;
     font-weight: 700;
-    color: #333;
-    margin-bottom: 0.25rem;
+    color: var(--text-color);
 }
 
 .stat-info p {
     color: #666;
-    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 /* Jobs Section */
 .jobs-section {
-    background: white;
+    background: var(--white);
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e1e5e9;
-    overflow: hidden;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .section-header {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid #e1e5e9;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .section-header h2 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333;
+    color: var(--text-color);
 }
 
 .add-job-btn {
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 8px;
@@ -349,11 +353,13 @@ body {
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .add-job-btn:hover {
+    background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 .jobs-table-container {
@@ -369,20 +375,18 @@ body {
 .jobs-table td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #e1e5e9;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .jobs-table th {
-    background: #f8f9fa;
-    font-weight: 600;
-    color: #333;
-    font-size: 0.9rem;
+    background-color: var(--bg-color);
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    color: #666;
 }
 
 .jobs-table td {
-    color: #666;
     font-size: 0.9rem;
 }
 
@@ -391,23 +395,14 @@ body {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 600;
-    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    display: inline-block;
 }
 
-.status-badge.pending {
-    background: #fff3cd;
-    color: #856404;
-}
-
-.status-badge.assigned {
-    background: #d1ecf1;
-    color: #0c5460;
-}
-
-.status-badge.completed {
-    background: #d4edda;
-    color: #155724;
-}
+.status-badge.pending { background-color: var(--warning-color); }
+.status-badge.assigned { background-color: var(--primary-color); }
+.status-badge.completed { background-color: var(--success-color); }
 
 .action-buttons {
     display: flex;
@@ -415,61 +410,31 @@ body {
 }
 
 .action-btn {
-    padding: 0.4rem 0.8rem;
+    background: none;
     border: none;
-    border-radius: 6px;
+    padding: 0.5rem;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    font-size: 1rem;
 }
 
-.edit-btn {
-    background: #007bff;
-    color: white;
-}
+.edit-btn { color: var(--primary-color); }
+.delete-btn { color: var(--danger-color); }
 
-.edit-btn:hover {
-    background: #0056b3;
-}
-
-.delete-btn {
-    background: #dc3545;
-    color: white;
-}
-
-.delete-btn:hover {
-    background: #c82333;
-}
-
-.assign-btn {
-    background: #28a745;
-    color: white;
-}
-
-.assign-btn:hover {
-    background: #1e7e34;
-}
-
-.complete-btn {
-    background: #17a2b8;
-    color: white;
-}
-
-.complete-btn:hover {
-    background: #117a8b;
-}
+.edit-btn:hover { background-color: rgba(0, 123, 255, 0.1); }
+.delete-btn:hover { background-color: rgba(220, 53, 69, 0.1); }
 
 .no-jobs {
     text-align: center;
-    padding: 3rem 2rem;
-    color: #666;
+    padding: 4rem 2rem;
+    color: #888;
 }
 
 .no-jobs i {
     font-size: 3rem;
-    color: #ccc;
     margin-bottom: 1rem;
+    color: #ccc;
 }
 
 /* Modal Styles */
@@ -578,8 +543,8 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #25d366;
-    box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.1);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--shadow-color);
 }
 
 .form-actions {
@@ -606,8 +571,8 @@ body {
 
 .save-btn {
     padding: 0.8rem 1.5rem;
-    background: linear-gradient(135deg, #25d366, #128c7e);
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -619,8 +584,8 @@ body {
 }
 
 .save-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    background: var(--primary-dark);
+    box-shadow: 0 4px 15px var(--shadow-color);
 }
 
 /* Staff Input Styles */
