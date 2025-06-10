@@ -4,9 +4,9 @@
   "description": "Professional car detailing website for Compound Detailing",
   "main": "index.html",
   "scripts": {
-    "start": "serve . -s -p $PORT --no-clipboard",
+    "start": "node server.js",
     "build": "echo 'Static site - no build needed'",
-    "dev": "serve . -s -l 3000"
+    "dev": "node server.js"
   },
   "keywords": [
     "car-detailing",
@@ -17,7 +17,7 @@
   "author": "Compound Detailing",
   "license": "MIT",
   "dependencies": {
-    "serve": "^14.2.1"
+    "express": "^4.18.2"
   },
   "engines": {
     "node": ">=18.0.0"
